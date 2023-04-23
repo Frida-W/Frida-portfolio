@@ -28,6 +28,8 @@
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 	
 </head>
 
@@ -355,7 +357,7 @@
 								</div>
 							</div>
 						</form>
-						<div class="alert-success">
+						<div class="alert-success">       
 							<p>Thanks, your message is sent successfully. We will contact you shortly!</p>
 						</div>
 					</div>
@@ -389,6 +391,17 @@
 	<script src="js/jquery.hover3d.js"></script>
 	<script src="js/particles.js"></script>
 	<script src="js/grained.js"></script>
+
+	<!-- emailjs Scripts-->
+	<script
+	type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+	<script type="text/javascript">
+		(function () {
+		  emailjs.init("tkUCr6JjuhQmh8yRo");
+		})();
+	  </script>
 	
 	<!-- Main Scripts -->
 	<script src="js/main.js"></script>

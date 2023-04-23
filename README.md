@@ -8,10 +8,10 @@ Hello! This is Frida's Personal Portfolio
 --------------------------------------
 
 Techs-Stack:
-- HTML5, CSS3, CSS3 Animations, LESS, jQuery
+- HTML5, CSS3, LESS, Javascript, jQuery
+- CSS3 Animations
 - Ajax contact php
-- jQuery Magnific Popup Plugin
-- jQuery Validation Plugin
+- jQuery Plugin ：Validation, Magnific Popup
 
 --------------------------------------
 

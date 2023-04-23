@@ -1,8 +1,8 @@
 <?php
 	/*Form settings*/
-	$subj = "New message from the site 'You Site Name'"; //letter subject
-	$to = 'beshleygame@mail.ru'; // Enter Your E-mail
-	$from = 'admin@you-site-name.com'; // Admin e-mail
-	$fromName = 'Your Company Name'; // Your company name
+	$subj = "New message from the site 'Frida-portfolio'"; //letter subject
+	$to = 'frida.wang@outlook.com'; // Enter Your E-mail
+	$from = 'frida.wang@outlook.com'; // Admin e-mail
+	$fromName = 'Frida'; // Your company name
 	$charset = 'UTF-8';
 ?>

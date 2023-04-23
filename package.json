@@ -20,5 +20,11 @@
   "homepage": "https://github.com/Frida-W/frida-portfolio#readme",
   "devDependencies": {
     "vite": "^4.3.1"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "ajax": "^0.0.4",
+    "emailjs": "^4.0.1",
+    "jquery": "^3.6.4"
   }
 }
