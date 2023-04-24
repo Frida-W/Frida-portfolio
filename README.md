@@ -10,7 +10,7 @@ Hello! This is Frida's Personal Portfolio
 Techs-Stack:
 - HTML5, CSS3, LESS, Javascript, jQuery
 - CSS3 Animations
-- Ajax contact php
+- Emailjs
 - jQuery Plugin ：Validation, Magnific Popup
 
 --------------------------------------

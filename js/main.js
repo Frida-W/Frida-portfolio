@@ -1,6 +1,3 @@
-// const $ = require('jquery');
-// import $ from 'jquery';
-
 $(function () {
   "use strict";
 
@@ -121,14 +118,14 @@ $(function () {
       const messageInput = $("textarea[name='message']").val();   
 
       const templateParams = {
-        to_name: "Artemis",
+        to_name: "Frida",
         from_name: nameInput,
         subject: subjectInput,
         message: `${messageInput}, please reply me via ${emailInput} or ${telInput}`,
       };
 
       emailjs
-        .send("service_lnadkjc", "template_artemis_website", templateParams)
+        .send("service_lnadkjc", "template_cwm6xpn", templateParams)
         .then(
           function (response) {
 			console.log('SUCCESS!', response.status, response.text)
