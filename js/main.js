@@ -70,7 +70,23 @@ $(function () {
     mainClass: "mfp-fade",
   });
 
-  /*      contact form */
+  /* Collapsible resume history */
+  const coll = document.getElementsByClassName("collapsible-btn");
+  let i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+
+  /* Contact form */
   $("#cform").validate({
     rules: {
       name: {
@@ -91,31 +107,12 @@ $(function () {
       },
     },
     success: "valid",
-    // submitHandler: function() {
-    // 	$.ajax({
-    // 		url: 'mailer/feedback.php',
-    // 		type: 'post',
-    // 		dataType: 'json',
-    // 		data: 'name='+ $("#cform").find('input[name="name"]').val() + '&tel='+ $("#cform").find('input[name="tel"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&subject='+ $("#cform").find('input[name="subject"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
-    // 		beforeSend: function() {
-
-    // 		},
-    // 		complete: function() {
-
-    // 		},
-    // 		success: function(data) {
-    // 			$('#cform').fadeOut();
-    // 			$('.alert-success').delay(1000).fadeIn();
-    // 		}
-    // 	});
-    // }
-    submitHandler: function () {	
-	//   event.preventDefault();
-      const nameInput = $("input[name='name']").val();                   
+    submitHandler: function () {
+      const nameInput = $("input[name='name']").val();
       const telInput = $("input[name='tel']").val();
       const emailInput = $("input[name='email']").val();
       const subjectInput = $("input[name='subject']").val();
-      const messageInput = $("textarea[name='message']").val();   
+      const messageInput = $("textarea[name='message']").val();
 
       const templateParams = {
         to_name: "Frida",
@@ -124,18 +121,16 @@ $(function () {
         message: `${messageInput}, please reply me via ${emailInput} or ${telInput}`,
       };
 
-      emailjs
-        .send("service_lnadkjc", "template_cwm6xpn", templateParams)
-        .then(
-          function (response) {
-			console.log('SUCCESS!', response.status, response.text)
-            alert('Your message has been sent!');
-          },
-          function (error) {
-			console.log('FAILED...', error);
-            alert('Oops... ' + JSON.stringify(error));
-          }
-        );
+      emailjs.send("service_lnadkjc", "template_cwm6xpn", templateParams).then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Your message has been sent!");
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          alert("Oops... " + JSON.stringify(error));
+        }
+      );
     },
   });
 });
