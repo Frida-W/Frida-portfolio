@@ -355,7 +355,7 @@
             &:hover::after  {
               color: @default-color;
             }
-            .active {
+            &.active {
               &::after {
                 content: "-";
               }
@@ -369,6 +369,10 @@
             .resume-item-title {
               display: flex;
               justify-content: space-between;
+              font-family: @icons-font;
+              color: @dark-color;
+              font-size: @subtitle-size;
+              font-weight: 600;
             }
           }
           &::after {

@@ -383,7 +383,7 @@
 .section.quotes .resume-container .resume-box .resume-items .resume-item .collapsible-btn:hover::after {
   color: #868686;
 }
-.section.quotes .resume-container .resume-box .resume-items .resume-item .collapsible-btn .active::after {
+.section.quotes .resume-container .resume-box .resume-items .resume-item .collapsible-btn.active::after {
   content: "-";
 }
 .section.quotes .resume-container .resume-box .resume-items .resume-item .resume-item-content {
@@ -395,6 +395,10 @@
 .section.quotes .resume-container .resume-box .resume-items .resume-item .resume-item-content .resume-item-title {
   display: flex;
   justify-content: space-between;
+  font-family: 'Ionicons';
+  color: #262626;
+  font-size: 16px;
+  font-weight: 600;
 }
 .section.quotes .resume-container .resume-box .resume-items .resume-item::after {
   content: "";
